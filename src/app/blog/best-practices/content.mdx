@@ -1,0 +1,43 @@
+import { BlogLayout } from "@/components/BlogLayout";
+
+import { CodeWindow } from "@/components/CodeWindow";
+
+export const meta = {
+  date: "2022-05-01",
+  title: "Software Development Best Practices",
+  description:
+    "Effective and efficient ways to write clean code while keeping in mind best practices",
+  image:
+    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
+  tags: ["Best practices"],
+};
+
+export default (props) => <BlogLayout meta={meta} {...props} />;
+
+As software developers and engineers, there are certain practices we need to consider when writing code for both development and production environments. These practices will not only enhance productivity in the present time, but also in the future.
+<br/>Some of these best practices to consider include:<br/>
+
+<h3>Code Readability</h3>
+Others, as well as ourselves, require the ability to skim code we wrote for a long period. Most of us are guilty of not comprehending code written years ago due to how poorly we wrote it, with no regard for the future.
+Code readability has to do with :
+Acceptable style of programming in a particular language or framework. An example is following the python PEP8 document that provides guidelines and best practices on how to write Python code.
+Good code commenting and documentation.
+
+<h3>High Cohesion</h3>
+The Oxford dictionary explains cohesion as "the action or fact of forming a united whole". This definition is not so far from what cohesion means in software development. Cohesion measures how well elements of a code segment belong together. Sometimes, as developers, we write code with low cohesion in the sense that the elements that make up the code segment relate less to each other.
+E.g.: Having a function that has to do with registering users, that function "establishes a connection with a database", "checks validity of user registration information", "stores user information in a database", "sends email to some email service of the status of the registration" and finally "logs information about the registration process".
+In a function like this, it is clear how loosely the various elements are cohesive to each other. The function name and what the function does are not in line. To make such a function highly cohesive, there is a need for separation of concern, where some elements need to be taken out of the function. Establishing connections with the database, sending emails to some email service, and logging information about the registration process needs to be taken out, in this case, to make the rest of the elements highly cohesive.
+
+<h3>Loose Coupling</h3>
+Loose coupling is prevalent in many modern programming paradigms, such as microservices, containers, and APIs. To put it another way, services are now built to be reusable and interchangeable without causing existing connections to fail. The software industry has been moving away from custom integrations involving Tight Coupling for several years. So what does this term mean?
+Loose coupling measures how different components of your codebase depend on each other to make a whole. Writing code where components which are not related to each other deeply depend on each other is frowned upon as a poor practice. I understand there is a need sometimes for some parts or components of our codebase to share code to make the whole codebase, there's no way we can achieve 100% loose coupling so the goal is to minimize the chance of high coupling in your codebase when you sense some.
+As programmers, our aim when writing code should be to achieve loose coupling. This helps codes to not deeply depend on each other, which helps in code reusability.
+
+<h3>Code Extensibility</h3>
+This has to do with the ease of adding additional features to an existing codebase. If we write a code with extensibility in mind, then it will be easier for others or yourself to add features later on in the development process.
+
+<h3>Code Maintainability</h3>
+This sounds equal to code extensibility, but there is a distinctive point. Code maintainability has to do with how well and easily a codebase can be maintained when there is a need for feature removal, addition, or improvement. While code extensibility has to do with the addition of features only, code maintainability goes a whole way from that. For one's code to be easily maintained, depends on <strong>good code readability</strong> and <strong>good code extensibility</strong>.
+
+<strong>CONCLUSION</strong><br/>
+These are just a few of the many best practices to follow as a software developer or engineer. Applying these practices will go a long way to help you in your software development life.
