@@ -7,7 +7,7 @@ import {
 export const socials = [
   {
     href: "https://x.com/richman_khay",
-    label: "X",
+    label: "Twitter",
     icon: IconBrandX,
   },
   {

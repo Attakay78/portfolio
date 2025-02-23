@@ -13,11 +13,6 @@ export const navlinks = [
     icon: IconBolt,
   },
   {
-    href: "/about",
-    label: "About",
-    icon: IconMessage2,
-  },
-  {
     href: "/projects",
     label: "Projects",
     icon: IconBriefcase2,
