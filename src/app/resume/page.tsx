@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <Container>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-4">
         <span className="text-4xl">💼</span>
         <Link
           href="/Richard-Quaicoe.pdf"
