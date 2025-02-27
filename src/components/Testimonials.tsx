@@ -19,7 +19,7 @@ export const Testimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('https://karyde.com/testimonials');
+      const response = await axios.get('http://localhost:5001/testimonials');
       setTestimonials(response.data);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
@@ -49,6 +49,12 @@ export const Testimonials = () => {
       console.error('Error submitting testimonial:', error);
       setStatus('error');
     }
+  };
+
+  const handleLike = (index: number) => {
+    const updatedTestimonials = [...testimonials];
+    updatedTestimonials[index].likes = (updatedTestimonials[index].likes || 0) + 1; // Increment like count
+    setTestimonials(updatedTestimonials);
   };
 
   return (
@@ -91,9 +97,19 @@ export const Testimonials = () => {
         {testimonials.length > 0 ? (
           testimonials.map((testimonial, index) => (
             <div key={index} className="border rounded-lg p-4 shadow-md bg-gray-100">
-              <p className="text-gray-800 italic">"{testimonial.testimonial}"</p>
+              <p className="text-gray-800 italic">&quot;{testimonial.testimonial}&quot;</p>
               <p className="mt-4 font-semibold">{testimonial.name}</p>
               {testimonial.email && <p className="text-gray-600">{testimonial.email}</p>}
+              <div className="flex items-center mt-2">
+                <span
+                  role="button"
+                  onClick={() => handleLike(index)}
+                  className="text-xl cursor-pointer"
+                >
+                  👍
+                </span>
+                <span className="ml-2 text-gray-600">{testimonial.likes || 0} Likes</span>
+              </div>
             </div>
           ))
         ) : (

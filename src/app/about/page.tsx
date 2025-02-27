@@ -28,7 +28,7 @@ export default function AboutPage() {
       <span className="text-4xl">💬</span>
       <Heading className="font-black">About Me</Heading>
       <Paragraph>
-        Hi, I'm Richard Quaicoe, a software engineer with over four years of experience...
+        Hi, I&apos;m Richard Quaicoe, a software engineer with over four years of experience...
       </Paragraph>
       <Testimonials />
     </Container>
