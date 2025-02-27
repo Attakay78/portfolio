@@ -2,6 +2,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+type Testimonial = {
+  name: string;
+  email?: string; // Optional
+  testimonial: string;
+};
+
 const defaultFormState = {
   name: "",
   email: "",
@@ -11,7 +17,7 @@ const defaultFormState = {
 export const Testimonials = () => {
   const [formData, setFormData] = useState(defaultFormState);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [testimonials, setTestimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
   useEffect(() => {
     fetchTestimonials();
