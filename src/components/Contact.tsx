@@ -48,7 +48,7 @@ export const Contact = () => {
     }
 
     try {
-      const response = await axios.post('https://karyde.com/send-message', {
+      const response = await axios.post('http://localhost:50001/send-message', {
         name: formData.name.value,
         email: formData.email.value,
         message: formData.message.value

@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import About from "@/components/About";
+import { Testimonials } from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "About | Richard Quaicoe",
@@ -25,6 +26,11 @@ export default function AboutPage() {
   return (
     <Container>
       <span className="text-4xl">💬</span>
+      <Heading className="font-black">About Me</Heading>
+      <Paragraph>
+        Hi, I'm Richard Quaicoe, a software engineer with over four years of experience...
+      </Paragraph>
+      <Testimonials />
     </Container>
   );
 }

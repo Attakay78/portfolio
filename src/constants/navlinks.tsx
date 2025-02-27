@@ -27,4 +27,9 @@ export const navlinks = [
     label: "Contact",
     icon: IconMail,
   },
+  {
+    href: "/testimonials",
+    label: "Testimonials",
+    icon: IconMessage2,
+  },
 ];
