@@ -20,6 +20,7 @@ const config: Config = {
       colors: {
         primary: "var(--neutral-700)",
         secondary: "var(--neutral-500)",
+        electricBlue: "#00D4FF",
       },
     },
   },

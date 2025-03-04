@@ -99,7 +99,6 @@ export const Testimonials = () => {
             <div key={index} className="border rounded-lg p-4 shadow-md bg-gray-100">
               <p className="text-gray-800 italic">&quot;{testimonial.testimonial}&quot;</p>
               <p className="mt-4 font-semibold">{testimonial.name}</p>
-              {testimonial.email && <p className="text-gray-600">{testimonial.email}</p>}
             </div>
           ))
         ) : (

@@ -1,7 +1,8 @@
 import {
   IconBrandLinkedin,
   IconBrandX,
-  IconBrandMedium
+  IconBrandMedium,
+  IconBrandGithub
 } from "@tabler/icons-react";
 
 export const socials = [
@@ -19,5 +20,10 @@ export const socials = [
     href: "https://medium.com/@richardquaicoe78",
     label: "Medium",
     icon: IconBrandMedium,
+  },
+  {
+    href: "https://github.com/Attakay78",
+    label: "GitHub",
+    icon: IconBrandGithub,
   },
 ];
