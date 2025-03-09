@@ -25,7 +25,7 @@ export const Testimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('https://karyde.com/testimonials');
+      const response = await axios.get('https://karyde.com/portfolio/testimonials');
       setTestimonials(response.data);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
@@ -37,7 +37,7 @@ export const Testimonials = () => {
     setStatus('loading');
 
     try {
-      const response = await axios.post('https://karyde.com/submit-testimonial', {
+      const response = await axios.post('https://karyde.com/portfolio/submit-testimonial', {
         name: formData.name,
         email: formData.email,
         testimonial: formData.testimonial
